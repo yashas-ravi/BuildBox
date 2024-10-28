@@ -1,4 +1,5 @@
 import styles from './service.module.css';
+import serviceim from '../assets/serviceim.png'
 
 export const Service = () => {
     return(
@@ -9,6 +10,9 @@ export const Service = () => {
             <div className={styles.colorBox2}></div>
             <div className={styles.servicesContainer}>
             <div className={styles.servicesTexts}>
+                <div className={styles.serviceim}>
+                <img src={serviceim} alt='img'/>;
+               
             <p>
                 <br />
 1. <b>User-Friendly Interface : </b>
@@ -37,6 +41,7 @@ Support is crucial for users who may encounter challenges while building their w
 <br />
 </p>
 </div>
+            </div>
             </div>
             </div>
         </section>
