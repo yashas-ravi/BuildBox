@@ -14,7 +14,7 @@ export const Home = () => {
             </ul>
     </div>
     <div className={styles.hero}>
-        <div className={styles.colorBox}></div>
+        <div className={styles.colorBox1}></div>
         <div className={styles.texts}>
             <h1>Creating websites made easy</h1>
             <h2>build your websites with ease</h2>
@@ -22,7 +22,7 @@ export const Home = () => {
                 No coding experience or skills needed, you can just play around and create your first website in a few minutes.
             </p>
             <div className={styles.heroButtons}>
-            <button>start build</button>
+            <button>Build Now!!</button>
             <button>contact</button>
             </div>
         </div>

@@ -1,7 +1,7 @@
 :root{
     /*     colors       */
-    --background-color: rgb(19, 6, 23);
-    --text-color: rgb(221, 221, 221);
+    --background-color: rgb(10, 2, 12);
+    --text-color: rgba(255, 247, 247, 0.995);
     --grey-text-color: rgb(175, 175, 175);
     --link-color: rgb(58, 115, 181);
 
@@ -11,6 +11,4 @@
     --large-font-size: 25px;
     --extra-large-font-size: 35px;
     --extra-x-large-font-size: 45px;
-
-  
 }

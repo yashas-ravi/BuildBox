@@ -1,0 +1,43 @@
+.service{
+    background-color: var(--background-color);
+    position: relative;
+    width: 100%;
+    height: 115vh;
+}
+
+.colorBox2{
+    position: absolute;
+    top: 5vh;
+    right: -10vw;
+    width: 700px;
+    height: 500px;
+    border-radius: 500px;
+    background-color: rgba(22, 22, 105, 0.368);
+    filter: blur(700px);
+}
+
+.servicesTexts p{
+    color: var(--grey-text-color);
+    position: relative;
+    font-size: var(--small-font-size);
+    font-weight: 400;
+}
+
+.servicesContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicesTexts {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

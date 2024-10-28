@@ -7,7 +7,6 @@
     position: relative;
     width: 100%;
     height: 100vh;
-   
 }
    
 .navbar{
@@ -61,7 +60,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .texts{
@@ -84,39 +83,36 @@
 .texts p{
     color: var(--grey-text-color);
     font-size: var(--medium-font-size);
+    position: relative;
 }
 
 .heroImgdiv{
-    position: relative;
     width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .heroImgdiv img{
     width: 600px;
-    height: 600;
+    height: 600px;
 }
 
-.colorBox{
+.colorBox1{
     position: absolute;
     top: 5vh;
     left: -10vw;
     width: 700px;
-    height: 600px;
+    height: 500px;
     border-radius: 500px;
-    background-color: rgba(18, 18, 86, 0.379);
+    background-color: rgba(22, 22, 105, 0.368);
     filter: blur(700px);
 }
 
 .heroButtons{
     display: flex;
     flex-direction: row;
-    column-gap: 40px;
-    padding-top: 40px;
+    column-gap: 30px;
+    padding-top: 20px;
 }
+
 
 .heroButtons button{
     width: 100px;
@@ -127,6 +123,10 @@
     border-radius: 25px;
     background-color: transparent;
     border: 2px solid var(--link-color);
-    padding: 2px;
+    padding: 2px ;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    color: var(--text-color);
+    background-color: transparent;
+    
 }
