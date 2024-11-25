@@ -1,0 +1,57 @@
+@import '../var.css';
+
+:root{
+    --gjs-primary-color : rgb(15 23 42);
+}
+
+.gjs-four-color{
+    color: var(--editor-accent);
+}
+
+.gjs-pn-btn.gjs-pn-active{
+    background-color: none;
+    border-radius: 5px;
+    border: 1px solid rgba(8,145,178,0.6);
+    box-shadow: none;
+}
+
+.gjs-block-category .gjs-title, .gjs-sm-label{
+    font-weight: 500;
+    font-size: var(--small-font-size);
+}
+
+.gjs-four-color-h:hover{
+    color: var(--editor-accent);
+}
+
+.gjs-sm-header, .gjs-trt-header, .gjs-layer-name, .gjs-traits-label, .gjs-clm-sel-id, .gjs-sm-sector-title, #gjs-sm-label, .gjs-label, .gjs-radio-item-label{
+    font-weight: 500;
+    font-size: var(--very-small-font-size);
+}
+
+.gjs-block{
+    border: 1px solid rgba(119, 119, 119, 0.5);
+    align-items: center;
+}
+
+.gjs-block__media{
+    width: 50px;
+    height: 50px;
+}
+
+.gjs-field{
+    background-color: #2c4152a2;
+}
+
+.gjs-mdl-container{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.gjs-mdl-dialog{
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.gjs-mdl-btn-close{
+    opacity: 1;
+}

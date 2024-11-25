@@ -1,0 +1,134 @@
+@import '../var.css';
+
+.home{
+    background-color: var(--background-color);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+   
+}
+   
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(147, 145, 145, 0.519);
+}
+
+.navbar strong{
+    color: rgb(241, 57, 57);
+    cursor: pointer;
+    font-size: var(--extra-x-large-font-size);
+    padding-left: 30px;
+}
+
+.navlinks{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlinks li{
+    list-style-type: none;
+
+}
+
+.navlinks a{
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: var(--medium-font-size);
+    font-weight: 500;
+    
+}
+
+.hero{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.texts{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 150px 10px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: start;
+    justify-content: start;
+}
+
+.texts h1, h2{
+    color: var(--text-color);
+    font-size: var(--extra-large-font-size);
+}
+
+.texts p{
+    color: var(--grey-text-color);
+    font-size: var(--medium-font-size);
+}
+
+.heroImgdiv{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroImgdiv img{
+    width: 600px;
+    height: 600;
+}
+
+.colorBox{
+    position: absolute;
+    top: 5vh;
+    left: -10vw;
+    width: 700px;
+    height: 600px;
+    border-radius: 500px;
+    background-color: rgba(18, 18, 86, 0.379);
+    filter: blur(700px);
+}
+
+.heroButtons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    padding-top: 40px;
+}
+
+.heroButtons button{
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid var(--link-color);
+    padding: 2px;
+    cursor: pointer;
+}
+
+.heroButtons button a{
+    color: var(--grey-text-color);
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    text-decoration: none;
+}

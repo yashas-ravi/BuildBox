@@ -1,0 +1,27 @@
+@import '../var.css';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.logotext{
+    position: absolute;
+    top: 5px;
+    left: 40%;
+    color: rgb(241, 57, 57);
+    font-size: var(--large-font-size);
+    font-weight: 700;
+    z-index: 100;
+    cursor: pointer;
+}
