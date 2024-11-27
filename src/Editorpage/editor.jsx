@@ -1,5 +1,4 @@
 import grapesjs from 'grapesjs';
-import styles from './editor.module.css';
 import 'grapesjs/dist/css/grapes.min.css';
 import './editorStyling.css';
 import gjsBlocks from 'grapesjs-blocks-basic';
@@ -20,7 +19,7 @@ export const EditorWindow = () => {
     plugins: [gjsBlocks],
     pluginsOpts: {
       [gjsBlocks]: {},
-    },
+    }
   });
 
 setEditor(editor);
@@ -29,7 +28,6 @@ setEditor(editor);
 
   return(
     <>
-    <strong className={styles.logotext}>Build Box</strong>
     <div id='editor'></div>
     </>
   );

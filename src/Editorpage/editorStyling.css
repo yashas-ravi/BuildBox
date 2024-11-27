@@ -1,5 +1,19 @@
 @import '../var.css';
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
 :root{
     --gjs-primary-color : rgb(15 23 42);
 }
