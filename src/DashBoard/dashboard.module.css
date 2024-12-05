@@ -1,0 +1,392 @@
+@import '../var.css';
+
+.ddashboard{
+    position: relative;
+    background-color: var(--dbackground-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.dsidebar{
+    position: relative;
+    width: 15%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dlightBackground-color);
+    border-radius: 25px;
+}
+
+.dlogo{
+    height: 5%;
+    margin-top: 10px;
+}
+
+.dlogo strong{
+    font-size: var(--large-font-size);
+    color: var(--red-accent);
+}
+
+.dsidebarMenu{
+    position: relative;
+    height: 95%;
+    padding: 100px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dsidebarMenu h1, .dmenuWebsite i{
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dmenuWebsite i{
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.dmenuActive{
+    background-color: var(--link-color);
+}
+
+.dmenuWebsite{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: -20px;
+}
+
+.dmenuWebsiteLabel{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.inpWrapper{
+    display: none;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.inpWrapper input{
+    border: none;
+    padding-left: 5px;
+}
+
+.inpWrapper button{
+    border: none;
+    padding: 2px;
+    background-color: var(--link-color);
+    cursor: pointer;
+}
+
+.dmenuWebsiteList{
+    position: relative;
+    width: 200px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-top: 1px solid var(--grey-text-color);
+}
+
+.dmenuWebsiteListRow{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dmenuWebsiteListRow p{
+    color: var(--grey-text-color);
+    font-weight: 500;
+    font-size: var(--small-font-size);
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.dmenuWebsiteListIconRow i{
+    position: relative;
+    color: var(--grey-text-color);
+    font-size: var(--very-small-font-size);
+}
+
+.dcontainer{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.dgreet{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    margin-top: 20px;
+}
+
+.dgreet h1{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: var(--extra-large-font-size);
+}
+
+.dgreet p{
+    position: relative;
+    color: var(--grey-text-color);
+    font-weight: 500;
+    font-size: var(--small-font-size);
+    left: 300px;
+}
+
+.dgreet h2{
+    color: green;
+    background-color: var(--grey-text-color);
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: var(--large-font-size);
+    cursor: pointer;
+}
+
+.dgreetlower{
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 0px 50px ;
+    color: var(--grey-text-color);
+    font-weight: 400;
+    font-size: var(--small-font-size);
+    text-align: left;
+}
+
+.dviewCards{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px 10px 10px 50px;
+    column-gap: 50px;
+}
+
+.dviewCard{
+    position: relative;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: var(--dlightBackground-color);
+    border-radius: 15px;
+}
+
+.dviewCard h1{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: var(--large-font-size);
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.dviewCard h3{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: var(--medium-font-size);
+    padding-left: 10px;
+}
+
+.dviewCard p{
+    color: var(--grey-text-color);
+    font-weight: 500;
+    font-size: var(--small-font-size);
+    padding: 5px 10px;
+}
+
+.dviewCard button{
+    color: var(--text-color);
+    background-color: var(--link-color);
+    font-size: var(--very-small-font-size);
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 20px 0px 0px 10px;
+    cursor: pointer;
+}
+
+.dviewCard .dcardRow, .dviewCard .dcardRow2{
+    display: flex;
+    flex-direction: row;
+}
+
+.dviewCard .dcardRow2{
+    margin-top: 20px;
+    height: 100px;
+    column-gap: 10px;
+}
+
+.dcardclmcolor1, .dcardclmcolor2, .dcardclmcolor3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.dcardclmcolor1 p, .dcardclmcolor2 p, .dcardclmcolor3 p{
+    color: var(--dbackground-color);
+    font-size: var(--very-small-font-size);
+    font-weight: 500;
+    text-align: center;
+}
+
+.dcardclmcolor1{
+    background-color: rgb(255, 0, 0);
+}
+
+.dcardclmcolor2{
+ background-color: yellow;
+}
+
+.dcardclmcolor3{
+ background-color: rgb(19, 219, 19);
+}
+
+.dactTable{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 0px 10px 50px;
+}
+
+.dactTable h1{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: var(--large-font-size);
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.dactTable table{
+    width: 60vw;
+    height: auto;
+}
+
+.dactTable th{
+    color: var(--text-color);
+    font-size: var(--medium-font-size);
+    padding: 10px;
+}
+
+.dactTable td{
+    color: var(--grey-text-color);
+    font-size: var(--medium-font-size);
+    text-align: center;
+    border-top: 1px solid var(--grey-outline);
+    padding: 10px;
+}
+
+.Swrapp{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px 10px 10px 50px;
+}
+
+.Swrapp h1{
+    color: var(--text-color);
+    font-size: var(--extra-large-font-size);
+    font-weight: 500;
+}
+
+.Suseracc, .SuserSupp{
+    position: relative;
+    width: 100%;
+    padding: 20px 0px 0px 20px;
+}
+
+.Suseracc p{
+    color: var(--grey-text-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.Seditacc{
+    padding-top: 20px;
+} 
+
+.Seditacc p, .SuserSupp a{
+    color: var(--link-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.SuserSupp{
+    top: 200px;
+}
+
+.SuserSupp p{
+    color: var(--grey-text-color);
+    font-size: var(--small-font-size);
+    margin-bottom: 5px;
+}
+
+.SuserSupp a{
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: var(--small-font-size);
+    cursor: pointer;
+}
+
+.Slogout a{
+    color: var(--red-accent);
+    position: relative;
+    top: 100px;
+}

@@ -5,7 +5,6 @@
     position: relative;
     width: 100%;
     height: 100vh;
-   
 }
    
 .navbar{
@@ -41,7 +40,6 @@
 
 .navlinks li{
     list-style-type: none;
-
 }
 
 .navlinks a{
@@ -50,6 +48,16 @@
     font-size: var(--medium-font-size);
     font-weight: 600;
 }
+
+.navlinks li:last-child{
+    border: 1px solid var(--link-color);
+    border-radius: 25px;
+    width: 90px;
+    padding: auto;
+    height: 30px;
+    text-align: center;
+}
+
 
 .hero{
     width: 100%;

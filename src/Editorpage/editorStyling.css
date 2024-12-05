@@ -15,7 +15,7 @@ html{
 }
 
 :root{
-    --gjs-primary-color : rgb(15 23 42);
+    --gjs-primary-color : var(--dbackground-color);
 }
 
 .gjs-four-color{
@@ -68,4 +68,13 @@ html{
 
 .gjs-mdl-btn-close{
     opacity: 1;
+}
+
+.gjs-pn-panel{
+    padding: 3px;
+}
+
+.gjs-pn-views-container{
+    top: 50px;
+    height: 90%;
 }

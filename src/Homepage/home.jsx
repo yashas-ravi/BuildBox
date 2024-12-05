@@ -10,6 +10,7 @@ export const Home = () => {
                 <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="/signin">sign in</a></li>
             </ul>
     </div>
     <div className={styles.hero}>
@@ -21,7 +22,7 @@ export const Home = () => {
                 No coding experience or skills needed, you can just play around and create your first website in a few minutes.
             </p>
             <div className={styles.heroButtons}>
-            <button><a href="/editor">start build</a></button>
+            <button><a href="/signup">Get started</a></button>
             <button><a href="#contact">contact</a></button>
             </div>
         </div>
