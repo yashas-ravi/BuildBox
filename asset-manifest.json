@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/BuildBox/static/css/main.0a0181d2.css",
+    "main.js": "/BuildBox/static/js/main.9fb40190.js",
+    "static/media/heroimg.png": "/BuildBox/static/media/heroimg.480001f5831ea1e18839.png",
+    "index.html": "/BuildBox/index.html",
+    "main.0a0181d2.css.map": "/BuildBox/static/css/main.0a0181d2.css.map",
+    "main.9fb40190.js.map": "/BuildBox/static/js/main.9fb40190.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a0181d2.css",
+    "static/js/main.9fb40190.js"
+  ]
+}
