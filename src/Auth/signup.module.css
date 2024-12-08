@@ -26,6 +26,10 @@
     font-weight: 500;
 }
 
+.SUwelcmgreet strong{
+    color: var(--red-accent);
+}
+
 .SUwelcmgreet h2{
     color: var(--grey-text-color);
     font-size: var(--large-font-size);
@@ -109,4 +113,35 @@
 .SUusertosignin a{
     text-decoration: none;
     color: var(--link-color);
+}
+
+@media only screen and (max-width: 470px) {
+    
+    .SUwelcmgreet h1{
+        font-size: var(--large-font-size);
+    }
+    
+    .SUwelcmgreet h2{
+        font-size: var(--medium-font-size);
+    }
+    
+    .SUWrapper{
+        width: 90%;
+    }
+    
+    .SUtextrow h2{ 
+        font-size: var(--small-font-size);
+    }
+    
+    .SUformwrap label{  
+        font-size: var(--small-font-size);
+    }
+    .SUformwrap button{
+        font-size: var(--very-small-font-size);
+        transform: translate(60px);
+    }
+    
+    .SUusertosignin p{
+        font-size: var(--small-font-size);
+    }
 }

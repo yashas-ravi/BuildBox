@@ -5,7 +5,7 @@ export const Signin = () => {
         <section className={styles.signin}>
             <div className={styles.SIwelcmgreet}>
                     <h1>Welcome back</h1>
-                    <h2>Let's login to your account</h2>
+                    <h2>Let's login to <strong>buildbox</strong> your account</h2>
             </div>
             <div className={styles.SIWrapper}>
                 <div className={styles.SItextrow}>

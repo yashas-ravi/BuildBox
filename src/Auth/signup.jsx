@@ -4,7 +4,7 @@ export const Signup = () => {
     return(
         <section className={styles.signup}>
             <div className={styles.SUwelcmgreet}>
-                    <h1>Welcome to buildbox</h1>
+                    <h1>Welcome to <strong>buildbox</strong></h1>
                     <h2>Let's create your account</h2>
             </div>
             <div className={styles.SUWrapper}>

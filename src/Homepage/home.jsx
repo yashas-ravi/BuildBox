@@ -2,16 +2,33 @@ import styles from './home.module.css';
 import heroImg from '../assets/heroimg.png';
 
 export const Home = () => {
+
+    let navLinks = "rr"
+    navLinks = document.getElementById('navlinks');
+
+    const handleMenu = (Mkey) => {
+        if(Mkey === 'open'){
+            navLinks.style.right = '5px';
+        }
+        if(Mkey === 'close'){
+            navLinks.style.right= '-400px';
+        }
+    }
+
  return(
     <section className={styles.home}>
     <div className={styles.navbar}>
             <strong>Build Box</strong>
-            <ul className={styles.navlinks}>
+            <ul id='navlinks' className={styles.navlinks}>
+            <p onClick={()=>handleMenu('close')} className={styles.navbarClosemenu}><i class="fa-solid fa-xmark"></i></p>
                 <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="/signin">sign in</a></li>
             </ul>
+            <div onClick={()=>handleMenu('open')} className={styles.navbarMenu}>
+            <i class="fa-solid fa-bars"></i>
+            </div>
     </div>
     <div className={styles.hero}>
         <div className={styles.colorBox}></div>

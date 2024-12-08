@@ -5,6 +5,7 @@ export const Dashboard = () => {
 
     const [menu, setMenu] = useState("dashboard");
     const [websites,setWebsites] = useState([]);
+    const [siteName, setsiteName] = useState("");
     const [sIndex, setsIndex] = useState(0);
 
     const showInput = () => {
@@ -34,11 +35,34 @@ export const Dashboard = () => {
      showInput();
     }
 
+    let sidebar = "d";
+    sidebar = document.getElementById('dsidebar');
+    let sidearrowR = document.getElementById('dsidearrowR');
+    let sidearrowL = document.getElementById('dsidearrowL');
+    const handleMenu = (a) => {
+        if(a === 'open'){
+            sidebar.style.left = '5px';
+            sidearrowR.style.zIndex = '999';
+            sidearrowL.style.zIndex = '1000';
+        }
+        if(a === 'close'){
+            sidebar.style.left= '-250px';
+            sidearrowR.style.zIndex = '1000';
+            sidearrowL.style.zIndex = '999';
+        }
+    }
+
     // console.log(websites[0].name);
 
     return(
         <section className={styles.ddashboard}>
-            <div className={styles.dsidebar}>
+            <div id='dsidebar' className={styles.dsidebar}>
+            <div id='dsidearrowR' onClick={()=>handleMenu('open')} className={styles.dsidearrowR}>
+            <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div id='dsidearrowL' onClick={()=>handleMenu('close')} className={styles.dsidearrowL}>
+            <i class="fa-solid fa-arrow-left"></i>
+            </div>
                 <div className={styles.dlogo}>
                     <strong>BuildBox</strong>
                 </div>
@@ -54,17 +78,17 @@ export const Dashboard = () => {
                         <button id='addSite' type="submit">add</button>
                     </form>
                     <div id='dmenuWebsiteList' className={styles.dmenuWebsiteList}>
-                        {websites.map(site =>(<div key={site.id} className={styles.dmenuWebsiteListRow}><p>{site.name}</p><div className={styles.dmenuWebsiteListIconRow}><i class="fa-solid fa-trash" onClick={()=>{setWebsites(websites.filter(s=>s.id !== site.id))}}></i></div></div>))}
+                        {websites.map(site =>(<div key={site.id} className={styles.dmenuWebsiteListRow}><p onClick={()=>{setMenu(`${site.name}`); setsiteName(`${site.name}`)}}>{site.name}</p><div className={styles.dmenuWebsiteListIconRow}><i class="fa-solid fa-trash" onClick={()=>{setWebsites(websites.filter(s=>s.id !== site.id))}}></i></div></div>))}
                     </div>
                     </div>
                     <h1 onClick={()=>setMenu("settings")}>Settings</h1>
                 </div>
             </div>
-            {menu==="dashboard" && (<div className={styles.dcontainer}>
+            {menu==="dashboard" && (<section className={styles.dcontainer}>
                 <div className={styles.dgreet}>
                     <h1>Hello, Manu</h1>
                     <p>1/10/2024</p>
-                    <h2>Y</h2>
+                    <h2 onClick={()=>setMenu("settings")}>Y</h2>
                 </div>
                 <p className={styles.dgreetlower}>manage your projects here</p>
                 <div className={styles.dviewCards}>
@@ -110,9 +134,16 @@ export const Dashboard = () => {
                         </tr>
                     </table>
                 </div>
-            </div>)}
+            </section>)}
+
+            {menu===siteName && (
+                <section className={styles.Wwrappper}>
+                    <h1>{siteName}</h1>
+                </section>  
+            )}
+
             {menu ==='settings' && (
-                <div className={styles.Swrapp}>
+                <section id='#settingContainer' className={styles.Swrapp}>
                     <h1>User account</h1>
                     <div className={styles.Suseracc}>            
                         <p>Name: Manu</p>
@@ -127,7 +158,7 @@ export const Dashboard = () => {
                         <p>found any issue? write in <a href="https://github.com/yashas-ravi/BuildBox/issues">github</a></p>
                         <p className={styles.Slogout}><a href="">Log out</a></p>
                     </div>
-                </div>
+                </section>
             ) }
         </section>
     );

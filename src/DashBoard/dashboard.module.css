@@ -22,6 +22,11 @@
     align-items: center;
     background-color: var(--dlightBackground-color);
     border-radius: 25px;
+    border: 1px solid var(--blue-border);
+}
+
+.dsidearrowR, .dsidearrowL{
+    display: none;
 }
 
 .dlogo{
@@ -105,7 +110,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border-top: 1px solid var(--grey-text-color);
+    border-top: 1px solid var(--blue-border);
 }
 
 .dmenuWebsiteListRow{
@@ -129,6 +134,10 @@
     position: relative;
     color: var(--grey-text-color);
     font-size: var(--very-small-font-size);
+}
+
+.dmenuWebsiteListIconRow i:hover{
+    color: var(--red-accent);
 }
 
 .dcontainer{
@@ -163,7 +172,7 @@
 
 .dgreet p{
     position: relative;
-    color: var(--grey-text-color);
+    color: var(--link-color);
     font-weight: 500;
     font-size: var(--small-font-size);
     left: 300px;
@@ -214,6 +223,7 @@
     padding: 20px;
     background-color: var(--dlightBackground-color);
     border-radius: 15px;
+    border: 1px solid var(--blue-border);
 }
 
 .dviewCard h1{
@@ -241,13 +251,13 @@
 
 .dviewCard button{
     color: var(--text-color);
-    background-color: var(--link-color);
+    background-color: rgba(8,145,178,0.3);
     font-size: var(--very-small-font-size);
     font-weight: 500;
-    border: none;
+    border: 1px solid rgba(8,145,178,0.4);
     border-radius: 15px;
-    padding: 5px;
-    margin: 20px 0px 0px 10px;
+    padding: 3px;
+    margin: 15px 0px 0px 9px;
     cursor: pointer;
 }
 
@@ -278,7 +288,7 @@
 }
 
 .dcardclmcolor1{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 119, 0);
 }
 
 .dcardclmcolor2{
@@ -286,7 +296,7 @@
 }
 
 .dcardclmcolor3{
- background-color: rgb(19, 219, 19);
+    background-color: rgb(30, 255, 0);
 }
 
 .dactTable{
@@ -323,7 +333,7 @@
     color: var(--grey-text-color);
     font-size: var(--medium-font-size);
     text-align: center;
-    border-top: 1px solid var(--grey-outline);
+    border-top: 1px solid var(--blue-border);
     padding: 10px;
 }
 
@@ -389,4 +399,164 @@
     color: var(--red-accent);
     position: relative;
     top: 100px;
+}
+
+@media only screen and (max-width:470px) {
+    
+    .ddashboard{
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .dsidebar{
+        position: absolute;
+        top: 10px;
+        left: -250px;
+        width: 250px;
+        height:90vh;
+        z-index: 1000;
+    }
+    .dsidearrowR, .dsidearrowL{
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: -30px;
+        width: 30px;
+        font-size: var(--medium-font-size);
+        color: var(--grey-text-color);
+        background-color: var(--dlightBackground-color);
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid var(--blue-border);
+    }
+    .dcontainer{
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+    
+    .dgreet{
+        width: 100%;
+        height: 30px;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    
+    .dgreet h1{
+        font-size: var(--large-font-size);
+    }
+    
+    .dgreet p{
+        font-size: var(--very-small-font-size);
+        left: 30px;
+    }
+    
+    .dgreet h2{
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        font-size: var(--medium-font-size);
+    }
+    
+    .dgreetlower{
+        padding: 0px ;
+        font-size: var(--very-small-font-size);
+    }
+    
+    .dviewCards{
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        margin-top: 40px;
+        padding: 10px 0px;
+        column-gap: 10px;
+        overflow-x: scroll;
+    }
+    
+    .dviewCard{
+        min-width: 200px;
+        height: 250px;
+    }
+    
+    .dviewCard h1{
+        font-size: var(--medium-font-size);
+    }
+    
+    .dviewCard h3{
+        font-size: var(--small-font-size);
+        padding-left: 10px;
+    }
+    
+    .dviewCard p{
+        font-size: var(--very-small-font-size);
+    }
+    .dviewCard .dcardRow{
+        align-items: center;
+    }
+    
+    .dviewCard .dcardRow2{
+        margin-top: 20px;
+        height: 100px;
+        column-gap: 5px;
+    }
+    
+    .dcardclmcolor1, .dcardclmcolor2, .dcardclmcolor3{
+        width: 50px;
+    }
+    
+    .dcardclmcolor1{
+        background-color: rgb(255, 119, 0);
+    }
+    
+    .dcardclmcolor2{
+     background-color: rgb(238, 255, 0);
+    }
+    
+    .dcardclmcolor3{
+     background-color: rgb(30, 255, 0);
+    }
+    
+    .dactTable{
+        padding: 0px;
+        margin-top: 10px;
+    }
+    
+    .dactTable h1{
+        font-size: var(--medium-font-size);
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    
+    .dactTable table{
+        width: 100%;
+    }
+    
+    .dactTable th{
+        font-size: var(--small-font-size);
+        padding: 5px;
+    }
+    
+    .dactTable td{
+        font-size: var(--small-font-size);
+        padding: 5px;
+    }
+    
+    .Swrapp{
+        padding: 10px;
+    }
+    
+    .Swrapp h1{
+        font-size: var(--large-font-size);
+        margin-top: 30px;
+    }
+    .Suseracc{
+        margin-top: 20px;
+    }
+    
+    .Suseracc, .SuserSupp{
+        padding: 0px;
+    }
+    .SuserSupp{
+        top: 100px;
+    }
 }

@@ -105,3 +105,38 @@
     cursor: pointer;
     margin-left: 15vw;
 }
+
+@media only screen and (max-width:470px) {
+    
+    .contact h1{
+        font-size: var(--large-font-size);
+        margin: 20px;
+        padding-left: 10px;
+    }
+    
+    .contact p{
+        color: var(--grey-text-color);
+        transform: translate(110px);
+    }
+    
+    .formWrapper{
+        margin-top: 50px;
+    }
+    
+    .formBox{
+        width: 90%;
+    }
+    
+    .formBox h2{
+        font-size: var(--medium-font-size);
+        margin: 20px 0px 20px 20px;
+    }
+    
+    .formfield label{
+        font-size: var(--small-font-size);
+    }
+    .formfield button{
+        font-size: var(--very-small-font-size);
+        transform: translate(40px);
+    }
+}
