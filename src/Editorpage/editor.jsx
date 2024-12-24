@@ -3,28 +3,114 @@ import 'grapesjs/dist/css/grapes.min.css';
 import './editorStyling.css';
 import gjsBlocks from 'grapesjs-blocks-basic';
 import { useEffect, useState } from 'react';
+import grapesjsPluginExport from "grapesjs-plugin-export";
 import { useParams } from 'react-router-dom';
 
 export const EditorWindow = () => {
 
   const [editor, setEditor] = useState(null);
-  const pageId = useParams();
-
+  const {pageId}= useParams();
+ 
   useEffect(() => {
 
   const editor = grapesjs.init({
     container: "#editor",
-    storageManager: false,
+    storageManager: {
+      type: "remote",
+      stepsBeforeSave:3,
+      contentTypeJson: true,
+      storeComponents: true,
+      storeStyles: true,
+      storeHtml: true,
+      storeCss: true,
+      headers:{
+          "Content-Type":"application/json",
+      },
+      id:"custom-",
+      urlStore: `https://localhost:8000/api/user/storecontent/${pageId}`,
+      urlLoad:  `https://localhost:8000/api/user/loadcontent/${pageId}`,
+     },
     fromElement: true,
     height: '100vh',
     width: '100%',
     blockManager: {
       blocks: [ ],
     },
-    plugins: [gjsBlocks],
+    panels: { },
+    plugins: [gjsBlocks, grapesjsPluginExport],
     pluginsOpts: {
-      [gjsBlocks]: {},
+      gjsBlocks: {},
+      grapesjsPluginExport: {},
     }
+  });
+
+  const panelManager = editor.Panels;
+
+   panelManager.addPanel({
+    id: 'logo-panel',
+    buttons: [
+      {
+        label:"BuildBox",
+      }
+    ],
+   });   
+
+  panelManager.addPanel({
+    id: 'gjs-pn-commands',
+    el: '.gjs-pn-commands',
+    buttons: [
+      {
+        id: 'saveDb',
+        className: 'fa fa-save',
+        command: 'saveDb',
+      },
+      {
+        id: 'download',
+        className: 'fa fa-download',
+        command: 'download',
+      },
+      {
+        id: 'cmd-clear',
+        className: 'fa fa-trash',
+        command: 'cmd-clear',
+      },
+      {
+        id: 'undo',
+        className: 'fa fa-undo',
+        command: 'undo',
+      },
+      {
+        id: 'redo',
+        className: 'fa fa-redo',
+        command: 'redo',
+      },
+    ],
+   });
+
+   editor.Commands.add("cmd-clear",{
+      run: (editor)=>{editor.DomComponents.clear();
+        editor.CssComposer.clear();
+      },
+   });
+
+   editor.Commands.add("download",{
+    run: (editor)=> editor.runCommand("gjs-export-zip"),
+ });
+
+ editor.Commands.add("saveDb",{
+  run: function(editor){
+    var htmldata = editor.getHtml();
+    var cssdata = editor.getCss();
+    console.log(htmldata);
+    console.log(cssdata);
+}});
+
+   editor.Commands.add("undo",{
+    run: (editor)=>{editor.UndoManager.undo();},
+ });
+
+  editor.Commands.add("redo",{
+    run: (editor)=>{editor.UndoManager.redo();},
   });
 
   const bm = editor.Blocks;
@@ -41,7 +127,7 @@ export const EditorWindow = () => {
         </g>
         </svg>`,
         content:  
-          `<div class="space"></div>`,
+          `<div className="space"></div>`,
         activate: true,
   });
 
@@ -52,18 +138,16 @@ export const EditorWindow = () => {
     <rect x="5" y="7" width="14" height="10" rx="2" stroke="none" stroke-width="2"/>
   <rect x="12" y="9" width="5" height="6" rx="1" fill="#33363F"/>
   </svg>`,
-    content: '<button class="button1">button</button>',
+    content: '<button className="button1">button</button>',
     activate: true,
   });
 
 setEditor(editor);
-    
 },[]);
 
   return(
-    <>
-    <div id='editor'></div>
-    </>
+    <div id='editor'>
+    </div>
   );
   
 }

@@ -74,7 +74,29 @@ html{
     padding: 3px;
 }
 
+.gjs-pn-options{
+    margin-right: 50px;
+}
+
 .gjs-pn-views-container{
     top: 50px;
     height: 90%;
+}
+
+.gjs-pn-logo-panel{
+    font-weight: 600;
+    display: block;
+    color: var(--red-accent);
+    left: 600px;
+}
+
+.gjs-pn-commands{
+    left: 1000px;
+    display: flex;
+    z-index: 0;
+    width: fit-content;
+}
+
+.hidegjsCommands{
+    display: none;
 }
